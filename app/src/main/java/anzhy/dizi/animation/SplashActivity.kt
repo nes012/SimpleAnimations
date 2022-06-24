@@ -1,12 +1,11 @@
 package anzhy.dizi.animation
 
-import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
-import android.view.Window
-import android.view.WindowManager
+import android.os.Handler
+import android.os.Looper
 import android.view.animation.AnimationUtils
-import anzhy.dizi.animation.databinding.ActivityMainBinding
+import androidx.appcompat.app.AppCompatActivity
 import anzhy.dizi.animation.databinding.ActivitySplashBinding
 
 class SplashActivity : AppCompatActivity() {
@@ -15,10 +14,14 @@ class SplashActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         splashBinding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(splashBinding.root)
 
+
+        Handler(Looper.getMainLooper()).postDelayed(Runnable {
+            startActivity(Intent(this@SplashActivity, MainActivity::class.java))
+            finish()
+        }, 3000)
 
         val animation = AnimationUtils.loadAnimation(this@SplashActivity, R.anim.rotation)
         splashBinding.icon.startAnimation(animation)
