@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFF"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="end"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/jerry"
+            android:layout_width="100dp"
+            android:transitionName="jerry"
+            android:src="@drawable/jerry"
+            android:layout_marginRight="16dp"
+            android:layout_height="100dp"/>
+
+        <ImageView
+            android:id="@+id/tom"
+            android:layout_width="100dp"
+            android:src="@drawable/tom"
+            android:transitionName="tom"
+            android:layout_height="100dp"/>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/run_left"
+            android:text="Run Left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/run_right"
+            android:text="Run Right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_b"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:text="Launch Activity B" />
+    <Button
+    android:id="@+id/animation"
+    android:layout_width="wrap_content"
+    android:layout_gravity="center"
+    android:layout_height="wrap_content"
+    android:text="Animation" />
+
+    <ImageView
+        android:id="@+id/circle"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:visibility="invisible"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        android:src="@drawable/hypno" />
+</LinearLayout>
